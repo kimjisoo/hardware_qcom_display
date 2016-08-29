@@ -22,6 +22,10 @@ ifneq ($(TARGET_BOARD_AUTO),true)
               ifneq ($(filter msmcobalt,$(TARGET_BOARD_PLATFORM)),)
                 include $(call all-named-subdir-makefiles,msmcobalt)
               endif
+            else
+              ifneq ($(filter msm8974 msm8x74,$(TARGET_BOARD_PLATFORM)),)
+                include $(call all-named-subdir-makefiles,msm8974)
+              endif
             endif
           endif
         endif
